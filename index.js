@@ -11,6 +11,7 @@ const uniqueElementID = (BaseComponent) => {
       this.gotten = 1;
       
       this.NextHtmlFor = this.NextHtmlFor.bind(this);
+      this.NextUid = this.NextUid.bind(this);
     }
     
     componentWillUpdate() {
@@ -33,6 +34,7 @@ const uniqueElementID = (BaseComponent) => {
       return (
         <BaseComponent
           getNextHtmlFor={this.NextHtmlFor}
+          getNextUid={this.NextUid}
           {...this.props} />
       );
     }
